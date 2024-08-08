@@ -1,10 +1,10 @@
-import React from 'react'
+
 import styled from 'styled-components'
 import avatar from '../../img/avatar.png'
 import { menuItems } from '../../utils/menuItems'
 import { signout } from '../../utils/Icons'
 
-export default function Navigation() {
+export default function Navigation({active,setActive}) {
 
   return (
     <NavStyled>
@@ -18,7 +18,10 @@ export default function Navigation() {
         <ul className='menu-items'>
             {menuItems.map((items)=>{
                 return  <li
-                key={items.id}>
+                key={items.id}
+                onClick={()=>setActive(items.id)}
+                className={active === items.id ? 'active':''}
+                >
                     {items.icon}
                     <span>{items.title}</span>
                 </li>
@@ -101,8 +104,9 @@ export default function Navigation() {
             position: absolute;
             left: 0;
             top: 0;
+            margin-top:-14.8rem;
             width: 4px;
-            height: 100%;
+            height: 1%;
             background: #222260;
             border-radius: 0 10px 10px 0;
         }
