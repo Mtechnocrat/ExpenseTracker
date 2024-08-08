@@ -1,6 +1,7 @@
 const express=require('express')
 const cors=require('cors');
 const { db } = require('./db/db');
+const {readdirSync} = require('fs');
 const app=express()
 
 require('dotenv').config()
@@ -11,6 +12,9 @@ const  PORT=process.env.PORT
 app.use(express.json()); //we want our data to be in jSon
 app.use(cors());
 
+
+//routes
+readdirSync('./routes').map((route)=>app.use('/api/v1',require('./routes/' + route)))
 
 
 const server=()=>{
