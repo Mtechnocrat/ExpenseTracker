@@ -1,7 +1,13 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
+import { useWindowSize } from '../../utils/useWindowSize';
+
+
 
 export default function Orb() {
+
+    const {width,height} =useWindowSize();
+    console.log(width,height);
 
     const moveOrb = keyframes`
         0%{
@@ -31,4 +37,5 @@ export default function Orb() {
   return (  
     <OrbStyled>Orb</OrbStyled>
   )
+
 }
