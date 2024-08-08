@@ -11,9 +11,11 @@ app.use(express.json()); //we want our data to be in jSon
 app.use(cors());
 
 
-const server=()=>{
 
-    console.log('Listening to port:',PORT);
+const server=()=>{
+    app.listen(PORT,() =>{
+        console.log("Listening to port : ",PORT);
+    })
 }
 
 server();
