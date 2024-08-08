@@ -16,7 +16,7 @@ function App() {
   );
 }
 const AppStyled=styled.div`
-height: 300vh;
+height: 140vh;
 background-image: url(${props =>props.bg});
 position: relative;
 
