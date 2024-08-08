@@ -14,7 +14,7 @@ export default function Orb() {
             transform: translate(0,0);
         }
         50%{
-            transform: translate(400px,500px);
+            transform: translate(${width/1.2}px,${height /1.5}px);
         }
         100%{
             transform: translate(0,0);
@@ -32,7 +32,7 @@ export default function Orb() {
         margin-top:-37vh;
         background: linear-gradient(180deg, #F56692 0%,#F2994A 100%);
         filter:blur(400px);
-        animation: ${moveOrb} 1s alternate linear infinite;
+        animation: ${moveOrb} 15s alternate linear infinite;
         `;
   return (  
     <OrbStyled>Orb</OrbStyled>
