@@ -94,7 +94,9 @@ export const GlobalProvider=({children})=>{
             deleteExpense,
             totalExpenses,
             totalBalance,
-            transactionsHistory
+            transactionsHistory,
+            error,
+            setError
 
         }}>
             {children}
