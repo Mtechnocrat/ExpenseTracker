@@ -25,6 +25,13 @@ function Form() {
         e.preventDefault()
         addIncome(inputState)
         getIncomes()
+        setInputState({
+            title: '',
+            amount: '',
+            date: '',
+            category: '',
+            description: '',
+        })
     }
   return (
     
