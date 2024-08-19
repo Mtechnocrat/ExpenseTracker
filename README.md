@@ -4,24 +4,24 @@ A simple expense tracking application built with the MERN (MongoDB, Express, Rea
 
 Features : 
 
-      Expense Tracking: Users can add new expenses, categorize them, and set budgets for different categories.
-      
-      Budget Management: Users can create, update, and delete budgets, and the system validates the allocated percentages to ensure they sum up to 100%.
-      
-      Transaction Management: Users can add income or expenses with ease by entering the transaction details.
-      
-      Dynamic Updates: The application provides real-time updates of balance, income, and expenses displayed on the interface.
-      
-      Transaction Removal: Users can remove unwanted transactions seamlessly with a delete button.
-      
-      Insights with Interactive Charts: The application provides a visual representation of the user's financial data through interactive charts.
+Expense Tracking: Users can add new expenses, categorize them, and set budgets for different categories.
+
+Budget Management: Users can create, update, and delete budgets, and the system validates the allocated percentages to ensure they sum up to 100%.
+
+Transaction Management: Users can add income or expenses with ease by entering the transaction details.
+
+Dynamic Updates: The application provides real-time updates of balance, income, and expenses displayed on the interface.
+
+Transaction Removal: Users can remove unwanted transactions seamlessly with a delete button.
+
+Insights with Interactive Charts: The application provides a visual representation of the user's financial data through interactive charts.
 
 
 Technologies Used :
 
-      Frontend: ReactJS
-      Backend: Node.js with Express.js
-      Database: MongoDB
+Frontend: ReactJS
+Backend: Node.js with Express.js
+Database: MongoDB
 
 
 Installation Steps :
