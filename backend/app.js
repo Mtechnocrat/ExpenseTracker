@@ -3,6 +3,7 @@ const cors=require('cors');
 const { db } = require('./db/db');
 const {readdirSync} = require('fs');
 const app=express()
+const transactionRoutes=require('./routes/transactions');
 
 require('dotenv').config()
 const  PORT=process.env.PORT
@@ -14,7 +15,8 @@ app.use(cors());
 
 
 //routes
-readdirSync('./routes').map((route)=>app.use('/api/v1',require('./routes/' + route)))
+// readdirSync('./routes').map((route)=>app.use('/api/v1',require('./routes/' + route)))
+app.use('/api/v1', transactionRoutes);
 
 
 const server=()=>{
