@@ -1,8 +1,8 @@
 const express=require('express')
 const cors=require('cors');
 const { db } = require('./db/db');
-const {readdirSync} = require('fs');
-const app=express()
+// const {readdirSync} = require('fs');
+const app=express();
 const transactionRoutes=require('./routes/transactions');
 
 require('dotenv').config()
@@ -18,13 +18,20 @@ app.use(cors());
 // readdirSync('./routes').map((route)=>app.use('/api/v1',require('./routes/' + route)))
 app.use('/api/v1', transactionRoutes);
 
+db();
 
-const server=()=>{
-    db();
-    app.listen(PORT,() =>{
-        console.log("Listening to port : ",PORT);
-    })
+if (process.env.NODE_ENV !== 'production') {
+    const PORT = process.env.PORT || 5000;
+    app.listen(PORT, () => {
+        console.log(`Server is running on port ${PORT}`);
+    });
 }
 
-server();
+// const server=()=>{
+//     db();
+//     app.listen(PORT,() =>{
+//         console.log("Listening to port : ",PORT);
+//     })
+// }
+
 module.exports=app;
